@@ -1,6 +1,7 @@
 package com.mycompany.finalproject;
 
-public enum OrderState {
+public enum OrderState 
+{
     NEW,
     FULFILLED
 }

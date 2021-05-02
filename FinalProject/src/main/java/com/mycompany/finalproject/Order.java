@@ -2,7 +2,8 @@ package com.mycompany.finalproject;
 
 import java.util.Random;
 
-public class Order {
+public class Order 
+{
 
     private int id;
     private OrderState state;

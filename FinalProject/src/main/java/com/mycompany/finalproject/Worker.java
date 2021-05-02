@@ -19,7 +19,6 @@ public class Worker {
 
     }
 
-
     private void processPlacedOrderBy(int maxLimit) {
         try {
             for (int processCounter = 1; processCounter <= maxLimit; processCounter++) {
