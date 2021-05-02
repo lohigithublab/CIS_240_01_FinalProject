@@ -1,3 +1,5 @@
+package com.mycompany.finalproject;
+
 import org.apache.commons.collections4.queue.CircularFifoQueue;
 
 import java.util.Queue;
@@ -5,8 +7,7 @@ import java.util.Queue;
 public class Worker {
 
     private Queue<Order> orders;
-
-        final int maxLimit = 10;
+    final int maxLimit = 10;
     public void run() {
         orders = new CircularFifoQueue<Order>(5);
         new Thread(new Runnable() {
@@ -27,12 +28,12 @@ public class Worker {
                 currentProcessingOrder.setState(OrderState.FULFILLED);
                 orders.remove();
                 System.out.println("Processed Order Id :" + currentProcessingOrder.getId() +
-                        "\n Order State After processed  :" + currentProcessingOrder.getState().name());
+                        "\n Order State After processed currentProcessingOrder :" + currentProcessingOrder.getState().name());
             }
             System.out.println("End Of Order Process" +
                     "\n Processed : " + maxLimit + " Orders");
-        } catch (Exception e) {
-
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
     }
 
@@ -44,8 +45,8 @@ public class Worker {
                 System.out.println("Order Placed, Id : "+newOrder.getId());
                 Thread.sleep(1000);
             }
-        } catch (Exception e) {
-
+        } catch (Exception ex) {
+               System.out.println(ex);
         }
     }
 

@@ -1,3 +1,5 @@
+package com.mycompany.finalproject;
+
 public class WorkTester {
     public static void main(String[] args) {
 

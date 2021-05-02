@@ -1,3 +1,5 @@
+package com.mycompany.finalproject;
+
 import java.util.Random;
 
 public class Order {
